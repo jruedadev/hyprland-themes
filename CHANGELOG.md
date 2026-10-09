@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.2.0] - 2026-10-09
+
+### Añadido
+- Archivos de los temas catppuccin-latte y catppuccin-mocha copiados desde `~/.config` para que el instalador pueda montarlos: `hypr/themes/`, `hypr/colors/`, `hypr/hyprpaper/`, `hypr/wallpapers/`, `waybar/catppuccin-*`, `waybar/colors/`, `wofi/colors/`, `wofi/themes/`, `kitty/colors/`, `swaync/style-catppuccin-*.css`.
+- Scripts y configuración compartida que referencian los cuatro temas: `hypr/scripts/` (notify-*, media-control, freeze-screenshot, toggle-gaps), `waybar/scripts/` (bluetooth, keyboardmenu, notification-status), `wofi/config`, `wofi/scripts/wofi-calc.sh` y `wofi/scripts/wofi-emoji.sh`, `swaync/config.json`, `gtk-3.0/settings.ini` y `waybar/start-waybar.sh`.
+
 ## [0.1.13] - 2026-10-09
 
 ### Corregido

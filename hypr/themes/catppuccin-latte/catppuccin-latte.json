@@ -1,0 +1,12 @@
+{
+    "gtkTheme": "catppuccin-latte-lavender-standard+default",
+    "kvantumTheme": "",
+    "iconTheme": "Adwaita",
+    "colorScheme": "catppuccin-latte",
+    "vsCodeTheme": "Catppuccin Latte",
+    "vsCodeExtraColors" : "",
+    "nvimTheme": "catppuccin-latte",
+    "obsidianTheme": "Catppuccin",
+    "font": "JetBrainsMono Nerd Font",
+    "darkReaderColors": {"background": "#eff1f5", "text": "#4c4f69"}
+}

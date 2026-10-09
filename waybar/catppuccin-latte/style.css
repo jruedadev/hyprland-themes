@@ -1,0 +1,169 @@
+@import "../colors/catppuccin-latte.css";
+
+* {
+  font-family: "FiraCode Nerd Font", "JetBrainsMono Nerd Font", "Noto Color Emoji", FontAwesome, monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+tooltip {
+  background-color: @bg0;
+  border: 2px solid @border_bar_module;
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+tooltip label {
+  color: @fg;
+  padding: 4px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: @bg0;
+  color: @fg;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  border-radius: 0px 0px 15px 15px;
+  border-bottom-width: 5px;
+  border-bottom-color: @border_bar;
+  border-bottom-style: solid;
+}
+
+#custom-launcher,
+#clock,
+#clock-date,
+#workspaces,
+#language,
+#pulseaudio,
+#network,
+#battery,
+#custom-bluetooth,
+#custom-notifications,
+#custom-powermenu {
+  background-color: @bg0;
+  color: @fg;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-bottom-width: 5px;
+  border-bottom-color: @border_bar_module;
+  border-bottom-style: solid;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+}
+
+#language:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#custom-bluetooth:hover {
+  background-color: @bg1;
+}
+
+#custom-bluetooth.off {
+  color: @bg5;
+}
+
+#custom-bluetooth.connected {
+  color: @blue;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#workspaces {
+  padding: 0px;
+}
+
+#workspaces button {
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+}
+
+#workspaces button:hover {
+  background-color: @bg1;
+  border-radius: 10px;
+}
+
+#workspaces button.active {
+  background-color: @blue;
+  color: @bg0;
+  border-radius: 10px;
+  margin-bottom: -5px;
+  border-bottom-width: 5px;
+  border-bottom-color: @border_workspace_active;
+  border-bottom-style: solid;
+}
+
+#custom-launcher {
+  background-color: @green;
+  color: @bg0;
+  border-bottom-color: @border_launcher;
+  margin-left: 15px;
+  padding-left: 20px;
+  padding-right: 21px;
+}
+
+#custom-launcher:hover {
+  background-color: @yellow;
+}
+
+#custom-notifications {
+  background-color: @blue;
+  color: @bg0;
+  border-bottom-color: @blue;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+#custom-notifications:hover {
+  background-color: @sky;
+}
+
+#custom-notifications.notifications-active {
+  background-color: @orange;
+}
+
+#custom-notifications.notifications-active:hover {
+  background-color: @yellow;
+}
+
+#custom-powermenu {
+  background-color: @red;
+  color: @bg0;
+  border-bottom-color: @border_powermenu;
+  margin-right: 15px;
+  padding-left: 20px;
+  padding-right: 23px;
+}
+
+#custom-powermenu:hover {
+  background-color: @orange;
+}
+
+/* Bluetooth popup styling */
+#custom-bluetooth tooltip {
+  background-color: @bg0;
+  border: 2px solid @border_bar_module;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#custom-bluetooth tooltip label {
+  color: @fg;
+  font-weight: normal;
+}
