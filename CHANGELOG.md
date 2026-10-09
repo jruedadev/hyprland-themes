@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.10] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `catppuccin-latte`: el botón de notificaciones no tenía sombra inferior porque usaba `@blue`, igual que el fondo. Añadido `border_notifications` (`#1557c0`, un azul más oscuro) a `waybar/colors/catppuccin-latte.css` y usado como `border-bottom-color`. Verificado con `grim`.
+
 ## [0.4.9] - 2026-10-09
 
 ### Corregido
