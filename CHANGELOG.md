@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.8] - 2026-10-09
+
+### Corregido
+- `wofi/themes/catppuccin-latte.css`: el import de la paleta era relativo (`../colors/...`) y GTK no lo resolvía, así que las variables quedaban vacías. Ahora usa la ruta absoluta, igual que en mocha (v0.4.2). Verificado con `grim` abriendo el lanzador con el comando del atajo: ya aparecen los colores de la paleta de latte.
+
 ## [0.4.7] - 2026-10-09
 
 ### Corregido
