@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.10] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-day`: el botón de notificaciones no tenía sombra inferior porque usaba el mismo azul que el fondo. Añadido el color `border_notifications` (#1f5a7d) a la paleta y usado como `border-bottom-color`, igual que la sombra del botón de apagado.
+
 ## [0.1.9] - 2026-10-09
 
 ### Corregido

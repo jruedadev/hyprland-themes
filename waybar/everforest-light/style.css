@@ -130,7 +130,7 @@ window#waybar {
 #custom-notifications {
   background-color: @blue;
   color: @bg0;
-  border-bottom-color: @blue;
+  border-bottom-color: @border_notifications;
   padding-left: 18px;
   padding-right: 18px;
 }
