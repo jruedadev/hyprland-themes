@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.12] - 2026-10-09
+
+### Añadido
+- `docs/handoff-summer-night.md`: contexto para la sesión de summer-night (reglas de trabajo, estado de summer-day, lecciones técnicas y pendientes).
+
 ## [0.1.11] - 2026-10-09
 
 ### Corregido
