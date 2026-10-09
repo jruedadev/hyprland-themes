@@ -2,6 +2,17 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.7.0] - 2026-10-09
+
+### Cambiado
+- Icon theme de los cuatro temas pasa de Papirus a Tela circle (paquete `tela-circle-icon-theme-standard`). Con Papirus, los iconos del dock mezclaban tiles cuadrados con iconos redondos de las apps. Tela circle tiene forma redonda en todos sus iconos.
+  - `catppuccin-latte`: `Papirus-Light` → `Tela-circle-light`.
+  - `catppuccin-mocha`: `Papirus-Dark` → `Tela-circle-dark`.
+  - `summer-day`: `Papirus-Light` → `Tela-circle-light`.
+  - `summer-night`: `Papirus-Dark` → `Tela-circle-dark`.
+- Verificado con `grim` en el dock de mocha, tras reiniciar `docking`. Los temas claros y summer no se activaron, así que no se verificaron.
+- Papirus sigue instalado en el sistema, pero ningún tema lo usa.
+
 ## [0.6.0] - 2026-10-09
 
 ### Cambiado
