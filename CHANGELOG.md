@@ -2,7 +2,14 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
-## [0.5.3] - 2026-10-09
+## [0.5.4] - 2026-10-09
+
+### Cambiado
+- Colores de wofi en los temas summer-day y summer-night, que tenían valores fijos fuera de la paleta. Los valores no cambian; se usan como tokens:
+  - `everforest.css` (summer-night): `#inner-box` pasa de `rgba(52, 63, 68, 0.9)` a `alpha(@bg1, 0.9)`, que es el mismo color.
+  - `everforest-light.css` (summer-day): `@outer_bg`, `@inner_bg` y `@input_border` definidos en `wofi/colors/everforest-light.css`. Sustituyen a `#ece8d0`, `rgba(235, 230, 206, 0.9)` y `#465000`.
+  - `everforest-light-power.css`: usa `@outer_bg` y `@power_fg` (`#2b3a42`, definido en la misma paleta).
+- Verificado con `grim`: el fondo de las cajas da los mismos píxeles antes y después en el menú de summer-day, en el de summer-night y en el de apagado de summer-day.
 
 ### Cambiado
 - Colores de los menús de wofi en `catppuccin-mocha` (`wofi/themes/catppuccin-mocha.css`): `#outer-box` usaba `#2a2a40` y `#inner-box` usaba `rgba(49, 50, 68, 0.9)`, colores fijos fuera de la paleta. Ahora se definen como tokens en `wofi/colors/catppuccin-mocha.css` (`@outer_bg` y `@surface0`) y el tema los usa por nombre. Los valores no cambian: se comprobó con `grim` que el fondo de ambas cajas da los mismos píxeles antes y después.
