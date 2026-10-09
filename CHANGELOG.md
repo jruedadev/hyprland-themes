@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.8] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-day`: el módulo de wifi apagado ahora usa el mismo estilo que el volumen en mute (sin `min-width` ni padding forzado), de modo que el icono queda centrado en una cápsula del mismo ancho.
+
 ## [0.1.7] - 2026-10-09
 
 ### Corregido

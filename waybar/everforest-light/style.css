@@ -84,13 +84,6 @@ window#waybar {
   color: @red;
 }
 
-#network.disabled,
-#network.disconnected {
-  min-width: 40px;
-  padding-left: 3px;
-  padding-right: 0px;
-}
-
 #workspaces {
   padding: 0px;
 }
