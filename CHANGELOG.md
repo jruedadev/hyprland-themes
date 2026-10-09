@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.12] - 2026-10-09
+
+### Corregido
+- Menú de apagado en `catppuccin-latte`: el script buscaba `catppuccin-latte-power.css`, no existía, y usaba el estilo normal, cuyos márgenes cortaban la opción Suspend. Nuevo `wofi/themes/catppuccin-latte-power.css`, basado en `catppuccin-mocha-power.css` con la paleta de latte. Verificado con `grim`: Reboot, Shutdown, Logout y Suspend se ven completos.
+
 ## [0.4.11] - 2026-10-09
 
 ### Corregido

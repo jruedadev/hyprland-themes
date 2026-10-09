@@ -35,7 +35,7 @@ Problemas detectados, sin corregir (comprobados con grep y lectura de archivos e
 - **Lanzador de waybar (resuelto en v0.4.9):** `waybar/catppuccin-latte/config`, línea 54, tenía `--width=20%` y `everforest-light.css`. Ahora `--width=35% --height=50%` y `catppuccin-latte.css`.
 - **Menús de teclado y bluetooth (resuelto en v0.4.9):** líneas 19 y 27 tenían `everforest` como argumento. Ahora `"-o $MAIN_DISPLAY"`.
 - **Notificaciones sin sombra (resuelto en v0.4.10):** `#custom-notifications` usaba `border-bottom-color: @blue`, igual que el fondo. Ahora usa `@border_notifications` (`#1557c0`), definido en la paleta de latte.
-- **Menú de apagado:** `powermenu.sh` usa `wofi/themes/<tema>-power.css` si existe. Para latte no existe (`wofi/themes/` solo tiene `catppuccin-mocha-power.css`, `everforest-light-power.css` y `everforest-power.css`), así que cae en `catppuccin-latte.css`, que puede cortar la opción Suspend como pasaba en mocha antes de v0.4.3. Revisar con `grim` y, si se corta, crear `catppuccin-latte-power.css` a partir de `everforest-power.css` (como en v0.4.3).
+- **Menú de apagado (resuelto en v0.4.12):** no existía `wofi/themes/catppuccin-latte-power.css` y la opción Suspend quedaba cortada. Creado a partir de `catppuccin-mocha-power.css`.
 - **Dock:** `docking/themes/` no tiene tema para latte, y `hypr/themes/catppuccin-latte/catppuccin-latte.json` no tiene `dockTheme`. Al activar latte el dock se queda con el último tema aplicado. Crear `docking/themes/catppuccin-latte.json` con la paleta de `waybar/colors/catppuccin-latte.css` (fondo claro, acento `@blue`) y añadir `"dockTheme": "catppuccin-latte"` al json del tema. Ojo: el dock de summer-day usa `paper`, que es claro; comparar antes de decidir.
 
 ## Lecciones técnicas
@@ -60,7 +60,7 @@ Orden sugerido, uno a uno, con versión propia para cada punto:
 3. ~~Lanzador de waybar y menús de teclado y bluetooth~~ (hecho en v0.4.9, verificados con `grim`). Waybar reiniciado con la config nueva.
 4. ~~Sombra de notificaciones~~ (hecho en v0.4.10: `border_notifications` (`#1557c0`) en la paleta y en `style.css`, verificado con `grim`).
 5. ~~Buscador de wofi (`#input`)~~ (hecho en v0.4.11: `@bg1` y `@fg`, verificado con `grim`; escribir texto no se pudo probar).
-6. Menú de apagado: verificar con `grim` y crear `catppuccin-latte-power.css` si se corta. (PATCH)
+6. ~~Menú de apagado~~ (hecho en v0.4.12: `catppuccin-latte-power.css` creado y verificado con `grim`).
 7. Tema de dock para latte y `dockTheme` en `catppuccin-latte.json`. (MINOR, porque es un archivo nuevo de tema)
 8. Después de latte: revisar los menús de wofi de los cuatro temas en una sola pasada (`wifimenu.sh`, `theme-switcher.sh`) por si quedan rutas o argumentos fijos.
 
