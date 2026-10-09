@@ -37,6 +37,8 @@ Problemas detectados, sin corregir:
 
 ## Lecciones técnicas
 
+- **Buscador de wofi:** `#input` con fondo `@blue` y texto oscuro deja el placeholder casi invisible. Usar un fondo de la escala neutra (`@bg1`) con texto `@fg` (corregido en v0.4.5).
+
 - **`@import` relativo en GTK/wofi** se resuelve desde el directorio de trabajo, no desde el archivo. Usar rutas absolutas.
 - **`text-align` no es válido en el CSS de waybar.** Para centrar, usar padding.
 - **Waybar y el wifi apagado:** con el radio apagado, waybar usa `format-disabled`, no `format-disconnected`.

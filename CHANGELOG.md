@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.5] - 2026-10-09
+
+### Corregido
+- Buscador de wofi en `catppuccin-mocha` (selector de teclado, bluetooth y demás menús): el campo tenía fondo `@blue` y texto `@bg0`, y el texto del placeholder casi no se veía. Ahora usa fondo `@bg1` y texto `@fg`, igual que el resto de la paleta de mocha. Verificado con `grim`.
+
 ## [0.4.4] - 2026-10-09
 
 ### Corregido
