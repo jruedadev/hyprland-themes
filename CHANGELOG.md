@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.6] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-day`: la cápsula del icono de wifi apagado era demasiado estrecha. Añadido `min-width: 40px` y sin padding lateral para los estados `disabled` y `disconnected`, para que el icono quede centrado.
+
 ## [0.1.5] - 2026-10-09
 
 ### Corregido
