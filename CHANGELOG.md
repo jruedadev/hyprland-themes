@@ -2,6 +2,15 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.5.5] - 2026-10-09
+
+### Cambiado
+- Buscador de wofi (`#input`) en summer-day y summer-night, para que se vea pastel como en mocha y latte. Antes era un bloque sólido: verde oliva en summer-day y azul-verdoso en summer-night, con el placeholder casi invisible.
+  - `everforest.css` (summer-night): fondo `@bg1` y texto `@fg`. La línea inferior se mantiene morada.
+  - `everforest-light.css` (summer-day): fondo `@bg1` y texto `@fg`. La línea inferior pasa de `#465000` a `@grey1`, para que no sea un color intenso.
+- Se quita el token `@input_border` de `wofi/colors/everforest-light.css`, que solo usaba la línea anterior.
+- Verificado con `grim` en summer-day y summer-night con el prompt "Keyboard layout:". Pendiente: el icono de lupa de summer-day se ve casi blanco.
+
 ## [0.5.4] - 2026-10-09
 
 ### Cambiado
