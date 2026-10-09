@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.2.1] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-night`: el botón de notificaciones no tenía sombra inferior. Añadido el color `border_notifications` (#3f6b66) a la paleta `waybar/colors/everforest.css` y usado como `border-bottom-color`, igual que en `summer-day`.
+
 ## [0.2.0] - 2026-10-09
 
 ### Añadido
