@@ -16,7 +16,7 @@
     "format-es": "ES",
     "format-en-intl": "EN",
     "format-en": "EN",
-    "on-click": "sh ~/.config/waybar/scripts/keyboardmenu.sh everforest",
+    "on-click": "sh ~/.config/waybar/scripts/keyboardmenu.sh \"-o $MAIN_DISPLAY\"",
     "on-click-right": "hyprctl switchxkblayout current next"
   },
 
@@ -24,7 +24,7 @@
     "exec": "~/.config/waybar/scripts/bluetooth-status.sh",
     "return-type": "json",
     "interval": 5,
-    "on-click": "sh ~/.config/waybar/scripts/bluetoothmenu.sh everforest",
+    "on-click": "sh ~/.config/waybar/scripts/bluetoothmenu.sh \"-o $MAIN_DISPLAY\"",
     "on-click-right": "blueman-manager"
   },
 
@@ -51,7 +51,7 @@
   "custom/launcher": {
     "interval": "once",
     "format": "󰣇",
-    "on-click": "pkill wofi || wofi --show drun --term=kitty --width=20% --height=50% --columns 1 -I -s ~/.config/wofi/themes/everforest-light.css -o $MAIN_DISPLAY",
+    "on-click": "pkill wofi || wofi --show drun --term=kitty --width=35% --height=50% --columns 1 -I -s ~/.config/wofi/themes/catppuccin-latte.css -o $MAIN_DISPLAY",
     "tooltip": false
   },
 

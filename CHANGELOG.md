@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.9] - 2026-10-09
+
+### Corregido
+- Lanzador de waybar en `catppuccin-latte` (icono de Arch): abría wofi con `--width=20%` y el CSS de summer-day (`everforest-light.css`). Ahora usa `--width=35% --height=50%` y `catppuccin-latte.css`, igual que el atajo Super+D.
+- Menús de teclado y bluetooth en `catppuccin-latte` (`waybar/catppuccin-latte/config`): el on-click pasaba `everforest` como opciones de wofi, sin efecto. Ahora pasa `-o $MAIN_DISPLAY`, igual que en mocha (v0.4.4). Verificado con `grim`: ambos menús abren en el monitor principal con el estilo de latte.
+
 ## [0.4.8] - 2026-10-09
 
 ### Corregido
