@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.7] - 2026-10-09
+
+### Corregido
+- `catppuccin-latte` no tenía keybindings: `hypr/themes/catppuccin-latte/catppuccin-latte.conf` no definía ningún `bind`. Añadidos los mismos que en `catppuccin-mocha` (lanzador, apagado, calculadora, portapapeles, emojis, scroll de workspaces y modo resize), con los wofi de latte y el rojo y azul de su paleta en el modo resize. Definido también `$mainMod = SUPER`. Verificado con `hyprctl binds` (17 binds nuevos) y `hyprctl configerrors` sin errores.
+
 ## [0.4.6] - 2026-10-09
 
 ### Añadido

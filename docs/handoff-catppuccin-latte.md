@@ -28,7 +28,7 @@ Archivos en el repo: `hypr/themes/catppuccin-latte/`, `waybar/catppuccin-latte/`
 
 Problemas detectados, sin corregir (comprobados con grep y lectura de archivos en v0.4.5):
 
-- **Keybindings ausentes.** `hypr/themes/catppuccin-latte/catppuccin-latte.conf` no tiene ninguna línea `bind` (0 de 69 líneas) y no define `$mainMod`. Mocha ya los tiene desde v0.4.1: copiar ese bloque, con `$mainMod = SUPER` al principio y la paleta de latte en los wofi. Los wofi de latte deben usar `~/.config/wofi/themes/catppuccin-latte.css`.
+- **Keybindings (resuelto en v0.4.7).** Antes, `hypr/themes/catppuccin-latte/catppuccin-latte.conf` no tenía ninguna línea `bind` (0 de 69 líneas) y no definía `$mainMod`. Ahora tiene el bloque de mocha con los wofi de latte.
 - **Import relativo roto:** `wofi/themes/catppuccin-latte.css`, línea 1: `@import "../colors/catppuccin-latte.css";`. GTK lo resuelve desde el directorio de trabajo, así que las variables quedan vacías. Corregir con ruta absoluta, como en mocha (v0.4.2) y en `everforest.css` (v0.1.2).
 - **Buscador de wofi:** `#input` usa `background-color: @blue` y `color: @bg0`. Es el mismo patrón que tenía mocha (placeholder casi invisible). Mocha se corrigió en v0.4.5 con `@bg1` y `@fg`. Revisar latte con `grim` antes de cambiarlo, porque la paleta es clara y el contraste puede ser distinto.
 - **Lanzador de waybar:** `waybar/catppuccin-latte/config`, línea 54: `--width=20%` y `-s ~/.config/wofi/themes/everforest-light.css`. Es el mismo error que tenía mocha: carga el CSS de summer-day y el ancho es pequeño. Debe quedar como en mocha: `--width=35% --height=50%` y `~/.config/wofi/themes/catppuccin-latte.css`.
@@ -54,7 +54,7 @@ Problemas detectados, sin corregir (comprobados con grep y lectura de archivos e
 
 Orden sugerido, uno a uno, con versión propia para cada punto:
 
-1. Keybindings: copiar el bloque de `hypr/themes/catppuccin-mocha/catppuccin-mocha.conf` a latte, con los CSS de latte. Verificar con `hyprctl binds`. (PATCH)
+1. ~~Keybindings de latte~~ (hecho en v0.4.7: añadidos al conf de latte, verificados con `hyprctl binds`). El resto de los puntos siguen igual.
 2. Import relativo de `wofi/themes/catppuccin-latte.css`: ruta absoluta. (PATCH)
 3. Lanzador de waybar y menús de teclado y bluetooth en `waybar/catppuccin-latte/config`. (PATCH)
 4. Sombra de notificaciones: `border_notifications` en la paleta de latte y uso en `style.css`. (PATCH)
