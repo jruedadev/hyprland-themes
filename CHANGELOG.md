@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.3.1] - 2026-10-09
+
+### Añadido
+- `docs/handoff-catppuccin-mocha.md`: contexto para la sesión de catppuccin-mocha (reglas de trabajo, cómo se activa un tema, estado y problemas detectados sin corregir, lecciones técnicas y pendientes).
+
 ## [0.3.0] - 2026-10-09
 
 ### Añadido
