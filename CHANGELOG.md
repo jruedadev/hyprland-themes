@@ -2,6 +2,14 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.5.3] - 2026-10-09
+
+### Cambiado
+- Colores de los menús de wofi en `catppuccin-mocha` (`wofi/themes/catppuccin-mocha.css`): `#outer-box` usaba `#2a2a40` y `#inner-box` usaba `rgba(49, 50, 68, 0.9)`, colores fijos fuera de la paleta. Ahora se definen como tokens en `wofi/colors/catppuccin-mocha.css` (`@outer_bg` y `@surface0`) y el tema los usa por nombre. Los valores no cambian: se comprobó con `grim` que el fondo de ambas cajas da los mismos píxeles antes y después.
+
+### Corregido en la documentación
+- La entrada 0.5.2 decía que mocha tenía el mismo beige que latte. No es así: en mocha no hay beige, solo colores oscuros fijos. El cambio de 0.5.3 es de parametrización, no de corrección visual.
+
 ## [0.5.2] - 2026-10-09
 
 ### Corregido
