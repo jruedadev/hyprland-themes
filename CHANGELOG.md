@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.5.2] - 2026-10-09
+
+### Corregido
+- Colores de los menús de wofi en `catppuccin-latte` (`wofi/themes/catppuccin-latte.css`): `#inner-box` tenía el beige fijo de summer-day (`rgba(220, 208, 192, 0.9)`) y `#outer-box` tenía `#e3e5e8`, fuera de la paleta. Ahora usan `alpha(@bg0, 0.9)` y `@bg1`. Verificado con `grim` en el menú de teclado. Mocha tiene el mismo patrón y queda pendiente.
+
 ## [0.5.1] - 2026-10-09
 
 ### Documentación

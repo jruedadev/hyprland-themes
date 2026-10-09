@@ -18,7 +18,7 @@ window {
     margin: 0px;
     padding: 0px;
     border-radius: 15px;
-    background-color: #e3e5e8;
+    background-color: @bg1;
     border-bottom-width: 5px;
     border-bottom-color: @blue;
     border-bottom-style: solid;
@@ -42,7 +42,7 @@ window {
     margin: 20px;
     padding: 15px;
     border-radius: 10px;
-    background-color: rgba(220, 208, 192, 0.9);
+    background-color: alpha(@bg0, 0.9);
     border: 2px solid @border_bar;
 }
 
