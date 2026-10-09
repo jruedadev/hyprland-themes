@@ -2,6 +2,16 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.6.0] - 2026-10-09
+
+### Cambiado
+- Icon theme de los cuatro temas pasa a Papirus, por su cobertura de apps y su estilo plano. Requiere el paquete `papirus-icon-theme`.
+  - `catppuccin-latte`: `Adwaita` → `Papirus-Light`.
+  - `catppuccin-mocha`: `Adwaita` → `Papirus-Dark`.
+  - `summer-day`: `Everforest-Light` → `Papirus-Light`.
+  - `summer-night`: `Everforest-Dark` → `Papirus-Dark`.
+- Verificado: `gsettings` reporta `Papirus-Dark` con mocha activo y el lanzador muestra iconos. Los temas claros y summer no se activaron, así que no se verificaron visualmente.
+
 ## [0.5.6] - 2026-10-09
 
 ### Documentación
