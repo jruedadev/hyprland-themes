@@ -1,0 +1,115 @@
+{
+  "margin-top": 0,
+  "margin-left": 120,
+  "margin-bottom": 0,
+  "margin-right": 120,
+  "height": 60,
+  "layer": "top",
+  "position": "top",
+  "spacing": 15,
+  "modules-left": ["custom/launcher", "clock", "clock#date"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["hyprland/language", "custom/bluetooth", "pulseaudio", "network", "battery", "custom/notifications", "custom/powermenu"],
+
+  "hyprland/language": {
+    "format": "{}",
+    "format-es": "ES",
+    "format-en-intl": "EN",
+    "format-en": "EN",
+    "on-click": "sh ~/.config/waybar/scripts/keyboardmenu.sh everforest",
+    "on-click-right": "hyprctl switchxkblayout current next"
+  },
+
+  "custom/bluetooth": {
+    "exec": "~/.config/waybar/scripts/bluetooth-status.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "sh ~/.config/waybar/scripts/bluetoothmenu.sh everforest",
+    "on-click-right": "blueman-manager"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+
+  "custom/launcher": {
+    "interval": "once",
+    "format": "󰣇",
+    "on-click": "pkill wofi || wofi --show drun --term=kitty --width=20% --height=50% --columns 1 -I -s ~/.config/wofi/themes/everforest-light.css -o $MAIN_DISPLAY",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-bluetooth-muted": "",
+    "format-muted": "",
+    "on-click-right": "pavucontrol",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "network": {
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": " {signalStrength}%",
+    "format-disconnected": "",
+    "on-click": "sh ~/.config/wofi/scripts/wifimenu.sh"
+  },
+
+  "battery": {
+    "bat": "BAT1",
+    "adapter": "ADP0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "max-length": 10,
+    "format": " {capacity}%",
+    "format-warning": " {capacity}%",
+    "format-critical": " {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": " {capacity}%",
+    "format-full": " 100%"
+  },
+
+  "clock": {
+    "format": " {:%H:%M}"
+  },
+
+  "clock#date": {
+    "format": " {:%A, %B %d, %Y}"
+  },
+
+  "custom/notifications": {
+    "format": "󰂚",
+    "exec": "sh ~/.config/waybar/scripts/notification-status.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "swaync-client -t",
+    "on-right-click": "swaync-client -d",
+    "tooltip": true
+  },
+
+  "custom/powermenu": {
+    "format": "󰐥",
+    "on-click": "pkill wofi || sh ~/.config/wofi/scripts/powermenu.sh \"$(bash ~/.config/waybar/scripts/get-theme.sh)\" '--height=17%'",
+    "tooltip": false
+  }
+}

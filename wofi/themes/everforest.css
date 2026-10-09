@@ -1,0 +1,77 @@
+@import "../colors/everforest.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+}
+
+window {
+    margin: 0px;
+    background-color: transparent;
+    color: @fg;
+    border: none;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 15px;
+    background-color: @bg0;
+    border-bottom-width: 5px;
+    border-bottom-color: @blue;
+    border-bottom-style: solid;
+}
+
+#input {
+    background-color: @blue;
+    color: @bg0;
+
+    margin: 15px;
+    padding: 12px 15px;
+    border: none;
+    font-weight: bold;
+
+    border-bottom-width: 5px;
+    border-bottom-color: @purple;
+    border-bottom-style: solid;
+}
+
+#inner-box {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(52, 63, 68, 0.9);
+    border: 2px solid @border_bar;
+}
+
+#text {
+    color: @fg;
+}
+
+#scroll {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#text {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#entry {
+    border: none;
+    padding: 10px;
+    margin: 0px;
+}
+
+#entry:selected {
+    background-color: @bg1;
+    color: @fg;
+
+    border-bottom-width: 5px;
+    border-bottom-color: @blue;
+    border-bottom-style: solid;
+}
