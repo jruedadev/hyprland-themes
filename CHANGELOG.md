@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.13] - 2026-10-09
+
+### Corregido
+- Icono de Arch en waybar (`summer-day` y `summer-night`): el lanzador abría wofi con `--width=20%`, y el menú salía cortado. Ahora usa `--width=35%`, igual que Win+D.
+- Icono de Arch en `summer-night`: el lanzador cargaba el CSS del tema claro (`everforest-light.css`). Ahora usa `everforest.css`.
+
 ## [0.1.12] - 2026-10-09
 
 ### Añadido
