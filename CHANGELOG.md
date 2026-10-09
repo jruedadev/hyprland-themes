@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.5.6] - 2026-10-09
+
+### Documentación
+- `README.md`: sección con las fuentes de los temas de SDDM del sistema (catppuccin, sddm, qylock y el tema propio). `winter` queda marcado como no confirmado.
+
 ## [0.5.5] - 2026-10-09
 
 ### Cambiado

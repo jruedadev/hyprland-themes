@@ -18,6 +18,15 @@ Para cambiar de tema: `sh ~/.config/hypr/scripts/switch-theme.sh summer-day`.
 
 Nota: `kitty.conf` no está incluido; el script de cambio de tema reemplaza su primera línea con `include colors/<tema>.conf`.
 
+## Temas de SDDM (referencias)
+
+Los temas de SDDM no están en el repo. Estas son sus fuentes, para incluirlos más adelante:
+
+- **catppuccin-latte-lavender** y **catppuccin-mocha-lavender** (MIT): [github.com/catppuccin/sddm](https://github.com/catppuccin/sddm).
+- **elarun** (GPL), **maldives** (CC-BY-SA) y **maya** (CC-BY-SA): vienen en el paquete `sddm`, en [github.com/sddm/sddm](https://github.com/sddm/sddm). El autor de `maya` figura como Sanjeev Premi.
+- **winter**: colección qylock de Darkkal44, [github.com/Darkkal44/qylock](https://github.com/Darkkal44/qylock). Sin confirmar: no encontré el tema `winter` dentro del repo.
+- **sddm-selector**: tema propio, con autor en sus metadatos (MIT).
+
 ## Versionado
 
 - Se usa [Semantic Versioning](https://semver.org/lang/es/). Historial en `CHANGELOG.md`.
