@@ -2,6 +2,13 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.2] - 2026-10-09
+
+### Corregido
+- Lanzador de waybar en `catppuccin-mocha` (icono de Arch): abría wofi con `--width=20%` y el CSS de summer-day (`everforest-light.css`). Ahora usa `--width=35% --height=50%` y `catppuccin-mocha.css`, igual que el atajo Super+D.
+- `wofi/themes/catppuccin-mocha.css`: el import de la paleta era relativo y GTK no lo resolvía, así que los menús salían sin colores. Ahora usa la ruta absoluta. Solo afecta a mocha; latte sigue pendiente.
+- Botón de notificaciones en `catppuccin-mocha` sin sombra inferior: `#custom-notifications` usaba `@blue`, igual que el fondo. Añadido `border_notifications` (`#4d6fa8`) a la paleta y usado como `border-bottom-color`.
+
 ## [0.4.1] - 2026-10-09
 
 ### Corregido

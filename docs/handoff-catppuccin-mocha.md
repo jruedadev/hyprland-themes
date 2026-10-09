@@ -50,9 +50,9 @@ Problemas detectados, sin corregir:
 ## Pendiente
 
 1. ~~Keybindings de mocha~~ (hecho en v0.4.1: añadidos al conf de mocha, verificados con `hyprctl binds`). Falta el estilo de los menús, ver punto 3. **Latte tiene el mismo problema** (`catppuccin-latte.conf` sin binds); no se ha tocado.
-2. Corregir el lanzador de waybar (`--width=35%`, `--height=50%`, paleta correcta).
-3. Corregir el import relativo de `wofi/themes/catppuccin-mocha.css` (y `catppuccin-latte.css`), con confirmación del usuario.
+2. ~~Lanzador de waybar~~ (hecho en v0.4.2).
+3. ~~Import relativo de `wofi/themes/catppuccin-mocha.css`~~ (hecho en v0.4.2). Falta el de `catppuccin-latte.css`.
 4. Verificar el menú de apagado con `grim` y crear `wofi/themes/catppuccin-mocha-power.css` si se corta.
-5. Añadir `border_notifications` a la paleta de mocha y usarlo en `#custom-notifications`.
+5. ~~`border_notifications` en mocha~~ (hecho en v0.4.2).
 6. Crear el tema de dock para mocha y `dockTheme` en `catppuccin-mocha.json`.
 7. Revisar `keyboardmenu.sh` y `bluetoothmenu.sh`, que están fijos en everforest.

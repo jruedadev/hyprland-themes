@@ -51,7 +51,7 @@
   "custom/launcher": {
     "interval": "once",
     "format": "󰣇",
-    "on-click": "pkill wofi || wofi --show drun --term=kitty --width=20% --height=50% --columns 1 -I -s ~/.config/wofi/themes/everforest-light.css -o $MAIN_DISPLAY",
+    "on-click": "pkill wofi || wofi --show drun --term=kitty --width=35% --height=50% --columns 1 -I -s ~/.config/wofi/themes/catppuccin-mocha.css -o $MAIN_DISPLAY",
     "tooltip": false
   },
 
