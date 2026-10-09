@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.3] - 2026-10-09
+
+### Corregido
+- Menú de apagado en `catppuccin-mocha`: el script buscaba `catppuccin-mocha-power.css`, no existía, y usaba el estilo normal, cuyos márgenes cortaban la opción Suspend. Nuevo `wofi/themes/catppuccin-mocha-power.css`, basado en `everforest-power.css` con la paleta de mocha.
+
 ## [0.4.2] - 2026-10-09
 
 ### Corregido
