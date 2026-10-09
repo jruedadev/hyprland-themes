@@ -62,6 +62,11 @@ Orden sugerido, uno a uno, con versión propia para cada punto:
 5. ~~Buscador de wofi (`#input`)~~ (hecho en v0.4.11: `@bg1` y `@fg`, verificado con `grim`; escribir texto no se pudo probar).
 6. ~~Menú de apagado~~ (hecho en v0.4.12: `catppuccin-latte-power.css` creado y verificado con `grim`).
 7. ~~Tema de dock para latte y `dockTheme`~~ (hecho en v0.5.0: `docking/themes/catppuccin-latte.json` y `dockTheme` en el json del tema, verificado con `hyprctl reload`).
-8. Después de latte: revisar los menús de wofi de los cuatro temas en una sola pasada (`wifimenu.sh`, `theme-switcher.sh`) por si quedan rutas o argumentos fijos.
+8. ~~Pasada de wofi de los cuatro temas~~ (hecho en v0.5.1: revisión sin cambios). Resultados:
+   - `wofi/scripts/wifimenu.sh`, `keyboardmenu.sh` y `bluetoothmenu.sh`: toman el tema de `get-theme.sh` y no tienen rutas ni argumentos fijos. Correctos para los cuatro temas.
+   - `wofi/scripts/powermenu.sh`, `wofi-calc.sh` y `wofi-emoji.sh`: reciben el tema como `$1`. Correctos.
+   - **Bug sin corregir en `wofi/scripts/theme-switcher.sh` (todos los temas):** el atajo `$mainMod SHIFT, T` lo llama sin argumentos, así que `--style ~/.config/wofi/themes/$1.css` apunta a `.css`, que no existe. El menú sale sin estilo (fuente y colores por defecto de GTK). Corrección posible: usar `get-theme.sh` para el CSS, como hacen los demás. Afecta a los cuatro temas, así que se decide aparte.
+   - **Script roto sin corregir en `hypr/scripts/toggle-theme.sh`:** lee `~/.config/hypr/hyprland.lua`, que no existe. Está ligado a `$mainMod CTRL, T` y solo alterna entre summer-day y summer-night. No afecta a latte, pero no hace nada útil.
+   - **Falta en el repo:** `~/.config/waybar/start-waybar-theme.sh` no está versionado (sí está `start-waybar.sh`). `theme-switcher.sh` lo llama al final. El instalador lo necesitará.
 
 Fuera de este handoff, sin empezar: el instalador (`install.sh`). Los tags v0.4.x y el push de los commits locales se hacen solo cuando el usuario lo pida.

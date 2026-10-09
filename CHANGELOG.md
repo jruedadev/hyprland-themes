@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.5.1] - 2026-10-09
+
+### Documentación
+- `docs/handoff-catppuccin-latte.md`: resultado de la pasada de los menús de wofi de los cuatro temas. Sin cambios de código. Quedan sin corregir, para decidir aparte: el menú de `theme-switcher.sh` sale sin estilo (llamado sin argumentos), `hypr/scripts/toggle-theme.sh` lee un `hyprland.lua` que no existe, y `waybar/start-waybar-theme.sh` no está en el repo.
+
 ## [0.5.0] - 2026-10-09
 
 ### Añadido
