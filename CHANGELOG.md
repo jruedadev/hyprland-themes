@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.4] - 2026-10-09
+
+### Corregido
+- Menús de teclado y bluetooth en `catppuccin-mocha` (`waybar/catppuccin-mocha/config`): el on-click pasaba `everforest` como opciones de wofi, un resto de copiar la configuración de everforest. El estilo ya salía bien porque los scripts lo toman de `get-theme.sh`, pero el argumento no hacía nada. Ahora pasan `-o $MAIN_DISPLAY`, igual que el lanzador y el apagado. Verificado con `grim`.
+
 ## [0.4.3] - 2026-10-09
 
 ### Corregido

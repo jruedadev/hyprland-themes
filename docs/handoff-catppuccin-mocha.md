@@ -33,7 +33,7 @@ Problemas detectados, sin corregir:
 - **Menú de apagado:** `powermenu.sh` usa `themes/<tema>-power.css` si existe. Para `catppuccin-mocha` no existe, así que cae en `catppuccin-mocha.css`, que tiene márgenes grandes y puede cortar el contenedor como pasaba en summer-night antes de v0.2.2. Revisar con `grim` antes de decidir.
 - **Dock:** `catppuccin-mocha.json` no tiene `dockTheme`. Al activar mocha, el dock se queda con el último tema aplicado (ahora `everforest-dark`, de summer-night). Hay que crear un tema de dock para mocha (p. ej. `catppuccin-mocha.json` en `docking/themes/`, con la paleta de `waybar/colors/catppuccin-mocha.css`) y añadir `"dockTheme"` a `catppuccin-mocha.json`.
 - **Notificaciones:** `waybar/catppuccin-mocha/style.css`, línea 127: `#custom-notifications` usa `border-bottom-color: @blue`, igual que summer-night antes de v0.2.1. La paleta de mocha no tiene `border_notifications`. Añadir el color a `waybar/colors/catppuccin-mocha.css` y usarlo en el estilo, como en everforest.
-- **Detección de tema:** `waybar/scripts/get-theme.sh` mapea `catppuccin-mocha` a `catppuccin-mocha`, así que el menú de apagado sí busca el CSS de mocha. Los scripts de teclado y bluetooth (`keyboardmenu.sh everforest`, `bluetoothmenu.sh everforest`) están fijos en `everforest`, así que en mocha usan la paleta de everforest. Revisar si conviene parametrizarlos.
+- **Detección de tema:** `waybar/scripts/get-theme.sh` mapea `catppuccin-mocha` a `catppuccin-mocha`, y los scripts de teclado y bluetooth lo usan para elegir el CSS. El argumento que pasaba waybar (`everforest`) se tomaba como opción de wofi y no hacía nada; ya corregido en v0.4.4.
 
 ## Lecciones técnicas
 
@@ -55,4 +55,4 @@ Problemas detectados, sin corregir:
 4. ~~Menú de apagado~~ (hecho en v0.4.3: `catppuccin-mocha-power.css` creado y verificado con `grim`).
 5. ~~`border_notifications` en mocha~~ (hecho en v0.4.2).
 6. ~~Tema de dock para mocha y `dockTheme`~~ (hecho en v0.4.0).
-7. Revisar `keyboardmenu.sh` y `bluetoothmenu.sh`, que están fijos en everforest.
+7. ~~`keyboardmenu.sh` y `bluetoothmenu.sh`~~ (hecho en v0.4.4: el on-click pasa `-o $MAIN_DISPLAY`; el estilo ya lo toma de `get-theme.sh`).
