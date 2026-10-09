@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.4] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-day`: al desactivar el wifi el módulo de red desaparecía, porque `format-disconnected` era una cadena vacía. Ahora muestra el icono `md-wifi_off` (U+F05AA) en rojo, según `#network.disconnected`.
+
 ## [0.1.3] - 2026-10-09
 
 ### Corregido

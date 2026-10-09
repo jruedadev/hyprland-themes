@@ -67,7 +67,7 @@
   "network": {
     "format-wifi": " {signalStrength}%",
     "format-ethernet": " {signalStrength}%",
-    "format-disconnected": "",
+    "format-disconnected": "󰖪",
     "on-click": "sh ~/.config/wofi/scripts/wifimenu.sh"
   },
 
