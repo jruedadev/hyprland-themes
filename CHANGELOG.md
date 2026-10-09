@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.5.0] - 2026-10-09
+
+### Añadido
+- Tema de dock `catppuccin-latte` (`docking/themes/catppuccin-latte.json`): fondo claro con la paleta de latte y acento azul (`#1e66f5`) para el indicador y el brillo del activo. Va en `~/.config/docking/themes/`.
+- `dockTheme: "catppuccin-latte"` en `hypr/themes/catppuccin-latte/catppuccin-latte.json`. Verificado con `hyprctl reload`: `switch-theme.sh` actualiza `dock.json` y reinicia `docking` con el tema de latte, sin duplicar instancias.
+
 ## [0.4.12] - 2026-10-09
 
 ### Corregido

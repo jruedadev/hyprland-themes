@@ -8,5 +8,6 @@
     "nvimTheme": "catppuccin-latte",
     "obsidianTheme": "Catppuccin",
     "font": "JetBrainsMono Nerd Font",
+    "dockTheme": "catppuccin-latte",
     "darkReaderColors": {"background": "#eff1f5", "text": "#4c4f69"}
 }

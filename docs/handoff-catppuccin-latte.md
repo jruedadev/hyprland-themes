@@ -36,7 +36,7 @@ Problemas detectados, sin corregir (comprobados con grep y lectura de archivos e
 - **Menús de teclado y bluetooth (resuelto en v0.4.9):** líneas 19 y 27 tenían `everforest` como argumento. Ahora `"-o $MAIN_DISPLAY"`.
 - **Notificaciones sin sombra (resuelto en v0.4.10):** `#custom-notifications` usaba `border-bottom-color: @blue`, igual que el fondo. Ahora usa `@border_notifications` (`#1557c0`), definido en la paleta de latte.
 - **Menú de apagado (resuelto en v0.4.12):** no existía `wofi/themes/catppuccin-latte-power.css` y la opción Suspend quedaba cortada. Creado a partir de `catppuccin-mocha-power.css`.
-- **Dock:** `docking/themes/` no tiene tema para latte, y `hypr/themes/catppuccin-latte/catppuccin-latte.json` no tiene `dockTheme`. Al activar latte el dock se queda con el último tema aplicado. Crear `docking/themes/catppuccin-latte.json` con la paleta de `waybar/colors/catppuccin-latte.css` (fondo claro, acento `@blue`) y añadir `"dockTheme": "catppuccin-latte"` al json del tema. Ojo: el dock de summer-day usa `paper`, que es claro; comparar antes de decidir.
+- **Dock (resuelto en v0.5.0):** no había tema de dock para latte ni `dockTheme` en su json. Ahora existen ambos. El tema es claro, con la geometría de mocha.
 
 ## Lecciones técnicas
 
@@ -61,7 +61,7 @@ Orden sugerido, uno a uno, con versión propia para cada punto:
 4. ~~Sombra de notificaciones~~ (hecho en v0.4.10: `border_notifications` (`#1557c0`) en la paleta y en `style.css`, verificado con `grim`).
 5. ~~Buscador de wofi (`#input`)~~ (hecho en v0.4.11: `@bg1` y `@fg`, verificado con `grim`; escribir texto no se pudo probar).
 6. ~~Menú de apagado~~ (hecho en v0.4.12: `catppuccin-latte-power.css` creado y verificado con `grim`).
-7. Tema de dock para latte y `dockTheme` en `catppuccin-latte.json`. (MINOR, porque es un archivo nuevo de tema)
+7. ~~Tema de dock para latte y `dockTheme`~~ (hecho en v0.5.0: `docking/themes/catppuccin-latte.json` y `dockTheme` en el json del tema, verificado con `hyprctl reload`).
 8. Después de latte: revisar los menús de wofi de los cuatro temas en una sola pasada (`wifimenu.sh`, `theme-switcher.sh`) por si quedan rutas o argumentos fijos.
 
 Fuera de este handoff, sin empezar: el instalador (`install.sh`). Los tags v0.4.x y el push de los commits locales se hacen solo cuando el usuario lo pida.
