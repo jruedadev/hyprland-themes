@@ -30,7 +30,7 @@ Problemas detectados, sin corregir (comprobados con grep y lectura de archivos e
 
 - **Keybindings (resuelto en v0.4.7).** Antes, `hypr/themes/catppuccin-latte/catppuccin-latte.conf` no tenía ninguna línea `bind` (0 de 69 líneas) y no definía `$mainMod`. Ahora tiene el bloque de mocha con los wofi de latte.
 - **Import relativo roto (resuelto en v0.4.8):** `wofi/themes/catppuccin-latte.css`, línea 1, tenía `@import "../colors/catppuccin-latte.css";`. Ahora usa la ruta absoluta, como en mocha (v0.4.2) y en `everforest.css` (v0.1.2).
-- **Colores fijos en `wofi/themes/catppuccin-latte.css` (sin corregir):** `#inner-box` tiene `background-color: rgba(220, 208, 192, 0.9)` (beige de summer-day) y `#outer-box` tiene `#e3e5e8`. No están en la paleta de latte. Se ven en la captura del lanzador (v0.4.8). Revisar en el punto 5 junto con el buscador.
+- **Colores fijos en `wofi/themes/catppuccin-latte.css` (sin corregir):** `#inner-box` tiene `background-color: rgba(220, 208, 192, 0.9)` (beige de summer-day) y `#outer-box` tiene `#e3e5e8`. No están en la paleta de latte. Se ven en la captura del lanzador (v0.4.8). No se tocan en el punto 5; quedan para decidir aparte.
 - **Buscador de wofi:** `#input` usa `background-color: @blue` y `color: @bg0`. Es el mismo patrón que tenía mocha (placeholder casi invisible). Mocha se corrigió en v0.4.5 con `@bg1` y `@fg`. Revisar latte con `grim` antes de cambiarlo, porque la paleta es clara y el contraste puede ser distinto.
 - **Lanzador de waybar (resuelto en v0.4.9):** `waybar/catppuccin-latte/config`, línea 54, tenía `--width=20%` y `everforest-light.css`. Ahora `--width=35% --height=50%` y `catppuccin-latte.css`.
 - **Menús de teclado y bluetooth (resuelto en v0.4.9):** líneas 19 y 27 tenían `everforest` como argumento. Ahora `"-o $MAIN_DISPLAY"`.
@@ -59,7 +59,7 @@ Orden sugerido, uno a uno, con versión propia para cada punto:
 2. ~~Import relativo de `wofi/themes/catppuccin-latte.css`~~ (hecho en v0.4.8, verificado con `grim`).
 3. ~~Lanzador de waybar y menús de teclado y bluetooth~~ (hecho en v0.4.9, verificados con `grim`). Waybar reiniciado con la config nueva.
 4. ~~Sombra de notificaciones~~ (hecho en v0.4.10: `border_notifications` (`#1557c0`) en la paleta y en `style.css`, verificado con `grim`).
-5. Buscador de wofi (`#input`), si con `grim` se ve mal. (PATCH)
+5. ~~Buscador de wofi (`#input`)~~ (hecho en v0.4.11: `@bg1` y `@fg`, verificado con `grim`; escribir texto no se pudo probar).
 6. Menú de apagado: verificar con `grim` y crear `catppuccin-latte-power.css` si se corta. (PATCH)
 7. Tema de dock para latte y `dockTheme` en `catppuccin-latte.json`. (MINOR, porque es un archivo nuevo de tema)
 8. Después de latte: revisar los menús de wofi de los cuatro temas en una sola pasada (`wifimenu.sh`, `theme-switcher.sh`) por si quedan rutas o argumentos fijos.

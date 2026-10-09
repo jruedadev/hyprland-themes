@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.11] - 2026-10-09
+
+### Corregido
+- Buscador de wofi en `catppuccin-latte` (selector de teclado, bluetooth y demás menús): el campo tenía fondo `@blue` y texto `@bg0`, y el placeholder casi no se veía. Ahora usa fondo `@bg1` y texto `@fg`, igual que en mocha (v0.4.5). Verificado con `grim`: "Keyboard layout:" se lee en el campo. No se probó escribir texto (no hay `wtype` instalado).
+
 ## [0.4.10] - 2026-10-09
 
 ### Corregido
