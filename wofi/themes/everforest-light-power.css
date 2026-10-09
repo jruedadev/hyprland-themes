@@ -1,0 +1,66 @@
+@import "/home/jruedadev/.config/wofi/colors/everforest-light.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+}
+
+window {
+    margin: 0px;
+    background-color: transparent;
+    color: #2b3a42;
+    border: none;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #ece8d0;
+    border-bottom-width: 5px;
+    border-bottom-color: @blue;
+    border-bottom-style: solid;
+}
+
+#inner-box {
+    margin: 0px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid @border_bar;
+}
+
+#scroll {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+#text {
+    color: #2b3a42;
+    font-weight: normal;
+    margin: 0px;
+}
+
+#entry {
+    margin: 4px 0px;
+    padding: 10px 14px;
+    border: none;
+    color: #2b3a42;
+    font-weight: normal;
+}
+
+#entry label {
+    color: #2b3a42;
+    font-weight: normal;
+}
+
+#entry:selected {
+    background-color: @bg0;
+    color: #2b3a42;
+    border-bottom-width: 5px;
+    border-bottom-color: @bg5;
+    border-bottom-style: solid;
+}

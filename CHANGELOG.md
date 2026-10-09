@@ -2,6 +2,13 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.11] - 2026-10-09
+
+### Corregido
+- Menú de apagado (wofi, `scripts/powermenu.sh`): el flag `--hide_search=true` no existe en wofi y hacía que el menú fallara al abrir; cambiado a `--hide-search`.
+- Menú de apagado: el `--height=17%` que llega desde waybar dejaba visible solo una opción. Ahora el script fija `--width 260 --height 290`.
+- Menú de apagado: nuevo estilo `themes/everforest-light-power.css` con más contraste en el texto, márgenes equilibrados y sin cortes. El script lo usa si existe `themes/<tema>-power.css`; si no, usa el estilo normal, así que los demás temas no cambian.
+
 ## [0.1.10] - 2026-10-09
 
 ### Corregido
