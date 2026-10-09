@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.7] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-day`: el icono de wifi apagado quedaba desplazado a la izquierda dentro de su cápsula. Ajustado `padding-left` a 3px en `#network.disabled` y `#network.disconnected`. (`text-align` no es válido en waybar.)
+
 ## [0.1.6] - 2026-10-09
 
 ### Corregido
