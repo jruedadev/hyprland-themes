@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.2.2] - 2026-10-09
+
+### Corregido
+- Menú de apagado en `summer-night`: el contenedor de las opciones salía cortado. El script buscaba `everforest-power.css`, no existía y usaba `everforest.css`, cuyos márgenes de 20px y padding de 15px dejaban el contenido fuera de la ventana de 260x290. Nuevo `wofi/themes/everforest-power.css`, equivalente al de summer-day con la paleta oscura.
+
 ## [0.2.1] - 2026-10-09
 
 ### Corregido
