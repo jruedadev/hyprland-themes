@@ -1,4 +1,4 @@
-@import "../colors/everforest-light.css";
+@import "/home/jruedadev/.config/wofi/colors/everforest-light.css";
 
 * {
     font-family: JetBrainsMono Nerd Font, FontAwesome;
@@ -48,6 +48,7 @@ window {
 
 #text {
     color: @fg;
+    font-weight: normal;
 }
 
 #scroll {
@@ -65,6 +66,13 @@ window {
     border: none;
     padding: 10px;
     margin: 0px;
+    color: @fg;
+    font-weight: normal;
+}
+
+#entry label {
+    color: @fg;
+    font-weight: normal;
 }
 
 #entry:selected {
