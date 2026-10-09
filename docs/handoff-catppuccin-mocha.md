@@ -27,7 +27,7 @@ Archivos en el repo: `hypr/themes/catppuccin-mocha/`, `waybar/catppuccin-mocha/`
 Problemas detectados, sin corregir:
 
 - **Keybindings ausentes.** `hypr/themes/catppuccin-mocha/catppuccin-mocha.conf` no tiene ningún `bind` (0 líneas), mientras que summer-night tiene 17. Con mocha activo no hay atajos para lanzador (`$mainMod, D`), menú de apagado (`B`), calculadora (`C`), portapapeles (`V`) ni emojis (`period`). Hay que confirmar si se definen en otro archivo antes de añadirlos.
-- **Lanzador de waybar** (`waybar/catppuccin-mocha/config`, línea 54): `--width=20%` y `-s ~/.config/wofi/themes/everforest-light.css`. Es el mismo error que tenía summer-night: usa la paleta clara y el ancho pequeño. Debe quedar como el de summer-night: `--width=35% --height=50%` y el CSS de la paleta que corresponda (ver abajo).
+- **Lanzador de waybar** (ver también el punto de keybindings, ya resuelto) (`waybar/catppuccin-mocha/config`, línea 54): `--width=20%` y `-s ~/.config/wofi/themes/everforest-light.css`. Es el mismo error que tenía summer-night: usa la paleta clara y el ancho pequeño. Debe quedar como el de summer-night: `--width=35% --height=50%` y el CSS de la paleta que corresponda (ver abajo).
 - **Paleta del lanzador:** no existe un CSS de wofi oscuro para catppuccin-mocha con el mismo estilo que `everforest.css`. Hay que decidir si se usa `themes/catppuccin-mocha.css` (ya existe, tiene el import relativo roto) o se crea un estilo propio.
 - **Import relativo roto:** `wofi/themes/catppuccin-mocha.css` (y `catppuccin-latte.css`) usa `@import "../colors/catppuccin-mocha.css";`. GTK lo resuelve desde el directorio de trabajo, no desde el archivo, así que las variables quedan vacías. Corregir con ruta absoluta, como en v0.1.1 y v0.1.2. El usuario pidió esperar antes de corregir catppuccin; confirmar antes de tocarlo.
 - **Menú de apagado:** `powermenu.sh` usa `themes/<tema>-power.css` si existe. Para `catppuccin-mocha` no existe, así que cae en `catppuccin-mocha.css`, que tiene márgenes grandes y puede cortar el contenedor como pasaba en summer-night antes de v0.2.2. Revisar con `grim` antes de decidir.
@@ -49,7 +49,7 @@ Problemas detectados, sin corregir:
 
 ## Pendiente
 
-1. Revisar los keybindings de mocha: confirmar si faltan en `hypr/themes/catppuccin-mocha/catppuccin-mocha.conf` o están en otro archivo, y añadirlos si hace falta.
+1. ~~Keybindings de mocha~~ (hecho en v0.4.1: añadidos al conf de mocha, verificados con `hyprctl binds`). Falta el estilo de los menús, ver punto 3. **Latte tiene el mismo problema** (`catppuccin-latte.conf` sin binds); no se ha tocado.
 2. Corregir el lanzador de waybar (`--width=35%`, `--height=50%`, paleta correcta).
 3. Corregir el import relativo de `wofi/themes/catppuccin-mocha.css` (y `catppuccin-latte.css`), con confirmación del usuario.
 4. Verificar el menú de apagado con `grim` y crear `wofi/themes/catppuccin-mocha-power.css` si se corta.

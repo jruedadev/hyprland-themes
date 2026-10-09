@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.1] - 2026-10-09
+
+### Corregido
+- `catppuccin-mocha` no tenía keybindings: `hypr/themes/catppuccin-mocha/catppuccin-mocha.conf` no definía ningún `bind`. Añadidos los mismos que en summer-night: lanzador (`$mainMod, D`), apagado (`B`), calculadora (`C`), portapapeles (`V`), emojis (`period`), scroll de workspaces y modo resize (`R`). Definido también `$mainMod = SUPER`, porque el conf se lee antes que la definición global de `hyprland.conf`.
+- El lanzador y los demás menús de mocha usan `~/.config/wofi/themes/catppuccin-mocha.css`. El import relativo de ese archivo sigue roto (pendiente en `docs/handoff-catppuccin-mocha.md`), así que los menús abren pero sin estilo.
+
 ## [0.4.0] - 2026-10-09
 
 ### Añadido
