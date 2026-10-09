@@ -37,3 +37,14 @@ gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 sed -i '1d' ~/.config/kitty/kitty.conf
 sed -i '1i\include colors/'$COLOR_SCHEME'.conf' ~/.config/kitty/kitty.conf
 pidof kitty >/dev/null && kill -s USR1 $(pidof kitty)
+
+# docking (dock): tema opcional por tema, definido como "dockTheme" en el json
+DOCK_THEME=$(jq -r '.dockTheme // empty' ~/.config/hypr/themes/$1/$1.json)
+DOCK_CONFIG=~/.config/docking/dock.json
+if [ -n "$DOCK_THEME" ] && [ -f "$DOCK_CONFIG" ] && [ "$(jq -r '.theme' "$DOCK_CONFIG")" != "$DOCK_THEME" ]; then
+	jq --arg t "$DOCK_THEME" '.theme = $t' "$DOCK_CONFIG" > "$DOCK_CONFIG.tmp" && mv "$DOCK_CONFIG.tmp" "$DOCK_CONFIG"
+	# docking no recarga la config en caliente, hay que reiniciarlo
+	pkill -f "^/usr/bin/python3 -m docking.app"
+	sleep 1
+	docking >/dev/null 2>&1 &
+fi

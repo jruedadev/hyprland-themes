@@ -2,6 +2,14 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.3.0] - 2026-10-09
+
+### Añadido
+- Tema oscuro para el dock `docking`: `docking/themes/everforest-dark.json` (paleta everforest, misma geometría que el tema `paper`). Va en `~/.config/docking/themes/`.
+- Campo `dockTheme` en los json de tema: `summer-night` usa `everforest-dark` y `summer-day` usa `paper` (el valor que ya tenía el dock).
+- `docking/dock.json.template`: plantilla de `~/.config/docking/dock.json` para el instalador, sin apps fijadas ni estadísticas personales. Tema por defecto `paper`; el instalador debe copiarla como `dock.json` y ajustar `theme` según el tema activo.
+- `hypr/scripts/switch-theme.sh`: al cambiar de tema, si el json define `dockTheme`, actualiza `theme` en `~/.config/docking/dock.json` y reinicia docking solo si el valor cambió.
+
 ## [0.2.2] - 2026-10-09
 
 ### Corregido
