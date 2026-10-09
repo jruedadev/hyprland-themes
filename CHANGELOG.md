@@ -2,6 +2,15 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.4.0] - 2026-10-09
+
+### Añadido
+- Tema de dock `catppuccin-mocha` (`docking/themes/catppuccin-mocha.json`): fondo gris lavanda con la paleta de mocha y acento lavanda (`#b4befe`) para el indicador y el brillo del activo. Va en `~/.config/docking/themes/`.
+- `dockTheme: "catppuccin-mocha"` en `hypr/themes/catppuccin-mocha/catppuccin-mocha.json`.
+
+### Corregido
+- `hypr/scripts/switch-theme.sh`: al reiniciar docking, el script no esperaba a que el proceso anterior cerrara, así que quedaban dos instancias. Ahora espera hasta 5 s y, si sigue vivo, lo fuerza con `SIGKILL`.
+
 ## [0.3.1] - 2026-10-09
 
 ### Añadido
