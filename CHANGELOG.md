@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.1.5] - 2026-10-09
+
+### Corregido
+- Barra de waybar en `summer-day`: con el radio wifi apagado (`nmcli radio wifi off`) el módulo de red seguía oculto. Waybar usa `format-disabled` en ese caso, no `format-disconnected`. Añadido `format-disabled` con el icono `md-wifi_off`.
+
 ## [0.1.4] - 2026-10-09
 
 ### Corregido
