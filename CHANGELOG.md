@@ -2,6 +2,13 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.9.0] - 2026-10-10
+
+### Cambiado
+- Wallpaper de `catppuccin-mocha` pasa de `gradient-synth-cat.png` a `salty_mountains.png`, en ambos monitores (`eDP-2` y `HDMI-A-1`).
+  - Archivo copiado a `hypr/wallpapers/salty_mountains.png` y a `~/.config/hypr/wallpapers/`. El original de mocha se conserva.
+  - Verificado con `grim` tras reiniciar `hyprpaper` con la config de mocha. El tema activo es mocha, así que el resto no cambió.
+
 ## [0.8.0] - 2026-10-10
 
 ### Cambiado
