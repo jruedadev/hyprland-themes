@@ -2,6 +2,13 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.8.0] - 2026-10-10
+
+### Cambiado
+- Wallpaper de `catppuccin-latte` pasa de `gradient-synth-cat-latte.png` a `forrest.png`, en ambos monitores (`eDP-2` y `HDMI-A-1`).
+  - Archivo copiado a `hypr/wallpapers/forrest.png` y a `~/.config/hypr/wallpapers/`. El original de latte se conserva.
+  - Verificado con `grim`: el wallpaper aparece en el escritorio tras reiniciar `hyprpaper` con la config de latte. No se activó el tema latte, así que el resto no cambió. Después se restauró el wallpaper de mocha.
+
 ## [0.7.0] - 2026-10-09
 
 ### Cambiado
