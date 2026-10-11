@@ -34,22 +34,25 @@ sh ~/.config/hypr/scripts/set-font.sh "$FONT"
 gsettings set org.gnome.desktop.interface icon-theme "$ICON_THEME"
 
 # kitty
-sed -i '1d' ~/.config/kitty/kitty.conf
+# borrar todos los includes de tema previos (no solo la línea 1) para evitar duplicados
+sed -i '/^include colors\//d' ~/.config/kitty/kitty.conf
 sed -i '1i\include colors/'$COLOR_SCHEME'.conf' ~/.config/kitty/kitty.conf
 pidof kitty >/dev/null && kill -s USR1 $(pidof kitty)
 
 # docking (dock): tema opcional por tema, definido como "dockTheme" en el json
 DOCK_THEME=$(jq -r '.dockTheme // empty' ~/.config/hypr/themes/$1/$1.json)
 DOCK_CONFIG=~/.config/docking/dock.json
+# docking 2.21+ arranca con docking.launcher; 2.13 usaba docking.app. Cubrir ambos.
+DOCK_PATTERN='^/usr/bin/python3 -m docking\.(app|launcher)'
 if [ -n "$DOCK_THEME" ] && [ -f "$DOCK_CONFIG" ] && [ "$(jq -r '.theme' "$DOCK_CONFIG")" != "$DOCK_THEME" ]; then
 	jq --arg t "$DOCK_THEME" '.theme = $t' "$DOCK_CONFIG" > "$DOCK_CONFIG.tmp" && mv "$DOCK_CONFIG.tmp" "$DOCK_CONFIG"
 	# docking no recarga la config en caliente, hay que reiniciarlo
 	# docking tarda en cerrarse; esperar a que termine antes de lanzar otro
-	pkill -f "^/usr/bin/python3 -m docking.app"
+	pkill -f "$DOCK_PATTERN"
 	for i in 1 2 3 4 5 6 7 8 9 10; do
-		pgrep -f "^/usr/bin/python3 -m docking.app" >/dev/null || break
+		pgrep -f "$DOCK_PATTERN" >/dev/null || break
 		sleep 0.5
 	done
-	pkill -9 -f "^/usr/bin/python3 -m docking.app" 2>/dev/null
+	pkill -9 -f "$DOCK_PATTERN" 2>/dev/null
 	docking >/dev/null 2>&1 &
 fi

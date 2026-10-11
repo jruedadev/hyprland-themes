@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.9.1] - 2026-10-11
+
+### Corregido
+- `hypr/scripts/switch-theme.sh` al cambiar de tema abría varios docks: el `pkill` buscaba `docking.app`, pero docking 2.21.0 arranca como `docking.launcher`. Ahora el patrón cubre ambos, así que el dock anterior se cierra antes de lanzar uno nuevo.
+- Kitty mostraba "already been included" al cambiar de tema: el script solo borraba la línea 1 de `kitty.conf`. Ahora borra todos los `include colors/...` antes de insertar el nuevo.
+
 ## [0.9.0] - 2026-10-10
 
 ### Cambiado
