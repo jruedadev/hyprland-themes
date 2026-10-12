@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.9.3] - 2026-10-12
+
+### Corregido
+- El dock no cambiaba de tema al cambiar de tema general. `switch-theme.sh` escribía el tema en `dock.json` antes de cerrar docking, y docking guarda su config en memoria al cerrarse, así que sobrescribía el cambio con el tema anterior. Ahora se cierra el dock primero, luego se escribe el tema y después se lanza.
+
 ## [0.9.2] - 2026-10-12
 
 ### Corregido

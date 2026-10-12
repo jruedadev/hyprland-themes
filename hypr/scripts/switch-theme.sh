@@ -45,14 +45,15 @@ DOCK_CONFIG=~/.config/docking/dock.json
 # docking 2.21+ arranca con docking.launcher; 2.13 usaba docking.app. Cubrir ambos.
 DOCK_PATTERN='^/usr/bin/python3 -m docking\.(app|launcher)'
 if [ -n "$DOCK_THEME" ] && [ -f "$DOCK_CONFIG" ] && [ "$(jq -r '.theme' "$DOCK_CONFIG")" != "$DOCK_THEME" ]; then
-	jq --arg t "$DOCK_THEME" '.theme = $t' "$DOCK_CONFIG" > "$DOCK_CONFIG.tmp" && mv "$DOCK_CONFIG.tmp" "$DOCK_CONFIG"
 	# docking no recarga la config en caliente, hay que reiniciarlo
 	# docking tarda en cerrarse; esperar a que termine antes de lanzar otro
+	# docking guarda su config al cerrarse, así que el tema se escribe después de cerrarlo
 	pkill -f "$DOCK_PATTERN"
 	for i in 1 2 3 4 5 6 7 8 9 10; do
 		pgrep -f "$DOCK_PATTERN" >/dev/null || break
 		sleep 0.5
 	done
 	pkill -9 -f "$DOCK_PATTERN" 2>/dev/null
+	jq --arg t "$DOCK_THEME" '.theme = $t' "$DOCK_CONFIG" > "$DOCK_CONFIG.tmp" && mv "$DOCK_CONFIG.tmp" "$DOCK_CONFIG"
 	docking >/dev/null 2>&1 &
 fi
