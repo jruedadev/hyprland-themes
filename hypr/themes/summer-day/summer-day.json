@@ -8,6 +8,5 @@
     "nvimTheme": "everforest_light",
     "obsidianTheme": "Everforest",
     "font": "JetBrainsMono Nerd Font",
-    "darkReaderColors": {"background": "#fdf6e3", "text": "#5c6a72"},
-    "dockTheme": "paper"
+    "darkReaderColors": {"background": "#fdf6e3", "text": "#5c6a72"}
 }

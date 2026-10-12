@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.9.2] - 2026-10-12
+
+### Corregido
+- `hypr/scripts/toggle-theme.sh` leía `~/.config/hypr/hyprland.lua`, que no existe, así que siempre aplicaba `summer-day`. Ahora lee `hyprland.conf` y reemplaza cualquier tema cargado, no solo summer-day/summer-night.
+- `hypr/themes/summer-day/summer-day.json` tenía `"dockTheme": "paper"`, un tema que docking no tiene. Al cambiar a summer-day el dock volvía a `catppuccin-mocha`. Se quitó la clave; el dock ya no cambia con summer-day.
+
 ## [0.9.1] - 2026-10-11
 
 ### Corregido
