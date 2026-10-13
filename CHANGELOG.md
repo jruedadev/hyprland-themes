@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [0.9.4] - 2026-10-13
+
+### Corregido
+- Al cambiar de tema se abrían dos docks. Cada tema tiene un `exec = switch-theme.sh <tema>` que corre en cada `hyprctl reload`, y dos ejecuciones simultáneas lanzaban cada una su dock. Ahora el bloque del dock va bajo un `flock`, así la segunda ejecución ve el tema ya aplicado y no relanza. El dock lanzado no hereda el lock.
+
 ## [0.9.3] - 2026-10-12
 
 ### Corregido
