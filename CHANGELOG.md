@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.0.1] - 2026-10-29
+
+### Corregido
+- Los menús de wofi (teclado, Wi-Fi, Bluetooth y apagado) se mostraban con el tema mocha en summer-day. `waybar/scripts/get-theme.sh` leía el tema de `hyprland.conf`, que ya no se carga. Ahora lo lee de `hyprland.lua`.
+
 ## [1.0.0] - 2026-10-29
 
 ### Cambiado (incompatible)

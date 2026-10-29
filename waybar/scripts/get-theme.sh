@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Detecta el tema actual de Hyprland y lo mapea al tema de wofi
 
-HYPRLAND_CONF="$HOME/.config/hypr/hyprland.conf"
+HYPRLAND_LUA="$HOME/.config/hypr/hyprland.lua"
 
-# Extrae el tema de la línea "source = ~/.config/hypr/themes/..."
-THEME_PATH=$(grep "source.*themes" "$HYPRLAND_CONF" | sed 's|.*themes/||; s|/.*||')
+# Extrae el tema de la línea 'local themeName = "..."' de hyprland.lua
+THEME_PATH=$(sed -n -E 's/^local themeName = "([^"]+)".*/\1/p' "$HYPRLAND_LUA" | head -n1)
 
 # Mapea el tema de Hyprland al tema de wofi
 case "$THEME_PATH" in
