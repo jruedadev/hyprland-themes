@@ -1,8 +1,8 @@
 {
   "shelf": {
-    "fill_start_color": [45, 53, 59, 242],
-    "fill_end_color": [52, 63, 68, 242],
-    "stroke_color": [86, 99, 95, 230],
+    "fill_start_color": [38, 60, 54, 242],
+    "fill_end_color": [46, 70, 62, 242],
+    "stroke_color": [84, 115, 103, 230],
     "stroke_width_px": 0.8,
     "inner_stroke_color": [211, 198, 170, 40],
     "corner_radius_px": 16,

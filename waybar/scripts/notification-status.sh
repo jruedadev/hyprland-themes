@@ -2,7 +2,8 @@
 # Obtener el número de notificaciones no leídas desde swaync
 
 # Intenta conectarse a swaync para obtener el estado
-NOTIFICATIONS=$(swaync-client -c 2>/dev/null | grep -c '"id"' || echo 0)
+NOTIFICATIONS=$(swaync-client -c 2>/dev/null | grep -c '"id"')
+NOTIFICATIONS=${NOTIFICATIONS:-0}
 
 # Crear salida JSON para waybar
 if [ "$NOTIFICATIONS" -gt 0 ]; then

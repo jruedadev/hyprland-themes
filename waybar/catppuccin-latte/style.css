@@ -23,8 +23,6 @@ tooltip label {
 window#waybar {
   background-color: @bg0;
   color: @fg;
-  transition-property: background-color;
-  transition-duration: 0.5s;
   border-radius: 0px 0px 15px 15px;
   border-bottom-width: 5px;
   border-bottom-color: @border_bar;

@@ -2,6 +2,28 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.0.0] - 2026-10-29
+
+### Cambiado (incompatible)
+- Migración a Lua para Hyprland 0.57, que solo lee configuración Lua. `hyprland.conf` ya no se carga; se conserva como referencia.
+- Cada tema tiene un módulo `hypr/themes/<tema>/<tema>.lua` (colores, `apply()`, modo resize, curvas y animaciones) que `hyprland.lua` carga con `require`. Los `.conf` de los temas se conservan como referencia.
+- `hypr/scripts/toggle-theme.sh` ya no edita `hyprland.conf`. Lee el tema de `hyprland.lua` y delega en `set-theme.sh`.
+- `wofi/scripts/theme-switcher.sh` ya no edita `hyprland.conf`. Usa `set-theme.sh` y toma el CSS de wofi del `colorScheme` del tema.
+- `hyprland.lua` no está en el repo; la configuración principal sigue siendo local.
+
+### Añadido
+- `hypr/scripts/set-theme.sh <tema>`: valida el nombre, reescribe `themeName` en `hyprland.lua`, lanza `switch-theme.sh` en segundo plano y recarga Hyprland.
+- `hypr/themes/summer-night/summer-night.lua` y `hypr/themes/summer-day/summer-day.lua`: migración de los dos temas summer.
+- `docking/themes/everforest-light.json`: tema del dock para summer-day, con los beige de la paleta everforest-light. `summer-day.json` vuelve a declarar `"dockTheme": "everforest-light"`.
+- Desenfoque (`decoration.blur`) activado en los temas claros y oscuros, y capa de desenfoque para waybar en `hyprland.lua`. Evita que las esquinas redondeadas de waybar parpadeen entre negro y transparente.
+
+### Cambiado
+- `docking/themes/everforest-dark.json` (dock de summer-night): fondo más verdoso.
+
+### Corregido
+- `waybar/*/style.css`: se quitó la transición de `background-color` de `window#waybar`, que contribuía al parpadeo de la esquina.
+- `waybar/scripts/notification-status.sh`: el `|| echo 0` generaba `0` dos veces y rompía la comparación numérica. Ahora usa `${NOTIFICATIONS:-0}`.
+
 ## [0.9.4] - 2026-10-13
 
 ### Corregido
