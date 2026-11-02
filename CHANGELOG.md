@@ -2,6 +2,14 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.0.2] - 2026-11-02
+
+### Corregido
+- Los iconos de workspace de waybar no cambiaban de escritorio al hacer clic. Waybar 0.15.0 envía comandos en formato legado que Hyprland 0.57 rechaza; el arreglo está en waybar-git (PR #5013 de Alexays/Waybar).
+
+### Eliminado
+- `on-scroll-up` / `on-scroll-down` con `hyprctl dispatch workspace e+1/e-1` (formato legado, sin efecto) en los módulos `hyprland/workspaces` de los cuatro temas de waybar.
+
 ## [1.0.1] - 2026-10-29
 
 ### Corregido
