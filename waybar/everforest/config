@@ -9,7 +9,13 @@
   "spacing": 15,
   "modules-left": ["custom/launcher", "clock", "clock#date"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["hyprland/language", "custom/bluetooth", "pulseaudio", "network", "battery", "custom/notifications", "custom/powermenu"],
+  "modules-right": ["tray", "hyprland/language", "custom/bluetooth", "pulseaudio", "network", "battery", "custom/notifications", "custom/powermenu"],
+
+  "tray": {
+    "icon-size": 22,
+    "spacing": 10,
+    "show-passive-items": true
+  },
 
   "hyprland/language": {
     "format": "{}",

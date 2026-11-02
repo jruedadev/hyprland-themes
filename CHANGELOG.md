@@ -2,6 +2,11 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.1.0] - 2026-11-02
+
+### Añadido
+- Módulo `tray` (bandeja de sistema, StatusNotifierItem) en la barra de waybar del tema `everforest`, con estilos para elementos pasivos, con atención y menús.
+
 ## [1.0.2] - 2026-11-02
 
 ### Corregido

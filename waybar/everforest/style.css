@@ -29,6 +29,7 @@ window#waybar {
   border-bottom-style: solid;
 }
 
+#tray,
 #custom-launcher,
 #clock,
 #clock-date,
@@ -150,6 +151,29 @@ window#waybar {
 
 #custom-powermenu:hover {
   background-color: @orange;
+}
+
+/* Bandeja de sistema (tray / StatusNotifierItem) */
+#tray {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @orange;
+  border-radius: 8px;
+}
+
+#tray menu {
+  background-color: @bg0;
+  color: @fg;
+  border: 2px solid @border_bar_module;
+  border-radius: 10px;
 }
 
 /* Bluetooth popup styling */
