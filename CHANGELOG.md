@@ -2,6 +2,13 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.2.0] - 2026-11-02
+
+### Añadido
+- Scripts de waybar que faltaban en el repo: `scripts/dunst.sh`, `scripts/mediaplayer.py`, `scripts/rofi-wifi-menu.sh`, `scripts/spotify.sh` y `scripts/power-menu/`.
+- Paletas de color compartidas `colors/` (gruvbox, mocha, nord, solarized).
+- `start-waybar-theme.sh`, que elige la configuración de waybar según el tema activo.
+
 ## [1.1.0] - 2026-11-02
 
 ### Añadido
