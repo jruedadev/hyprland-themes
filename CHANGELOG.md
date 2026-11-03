@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.3.0] - 2026-11-03
+
+### Añadido
+- `hypr/hyprland.lua`: configuración principal de Hyprland 0.57 (Lua), versionada tal cual. `monitors.lua` no se incluye porque lo genera nwg-displays por máquina.
+- Escritorios 5 y 6 asignados a la pantalla externa `HDMI-A-1` (reglas `workspace_rule` persistentes).
+
 ## [1.2.0] - 2026-11-02
 
 ### Añadido
