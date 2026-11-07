@@ -107,6 +107,18 @@ window#waybar {
   border-bottom-style: solid;
 }
 
+/* Barra de la pantalla externa (HDMI-A-1): activo en verde principal del tema */
+window#waybar.HDMI-A-1 #workspaces button.active {
+  background-color: @green;
+  border-bottom-color: @border_launcher;
+}
+
+/* Separador entre escritorios 4 y 5 (5 y 6 fijos en la pantalla externa) */
+#workspaces button.ws-5 {
+  margin-left: 14px;
+  border-left: 2px solid @grey0;
+}
+
 #custom-launcher {
   background-color: @green;
   color: @bg0;

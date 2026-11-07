@@ -2,6 +2,12 @@
 
 Este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [1.4.0] - 2026-11-07
+
+### Cambiado
+- `waybar/everforest/style.css`: el escritorio activo en la barra de la pantalla externa (`HDMI-A-1`) usa el verde principal del tema; la barra integrada mantiene el azul.
+- `waybar/everforest/style.css`: separador entre los escritorios 4 y 5, que quedan fijos en la pantalla externa.
+
 ## [1.3.0] - 2026-11-03
 
 ### Añadido
